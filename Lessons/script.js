@@ -149,4 +149,80 @@ console.log(strr.charAt(3));
 let p = prompt("Enter full name");
 
 console.log(`Username for your name is @${p}${p.length}.`);
+
+// <------arrays--->
+
+let heroes = ["ironman","hulk","black widow","spiderman"];
+console.log(heroes);
+console.log(heroes[3]);
+heroes[3]="dr strange";
+console.log(heroes[3] ,"l \n \n");
+
+for(ind = 0;ind<heroes.length;ind++){
+  console.log(heroes[ind]);
+}
+for(let hero of heroes){
+    console.log(hero);
+}
+
+let marksOf = [85,97,44,37,76,60];
+let sum = 0;
+for(let p=0 ;p<marksOf.length ;p++){
+    sum =sum + marksOf[p];
+}
+let average = sum/marksOf.length;
+console.log("average = ",average);
+
+
+
+// let price =[250,645,300,900,50];
+// for( let p of price){
+//    p*=0.9;
+// } 
+// console.log(price);
+
+let price =[250,645,300,900,50];
+for( let q =0;q<price.length;q++){
+    price[q]*=0.9;
+
+}
+console.log(price);
+
+
+let veggies = ["potato","tomato","brocolli","bean"];
+
+console.log(veggies.toString());
+let numbermark = [45,43,666,865,212];
+console.log(numbermark.toString());
+
+let aka = numbermark.concat(veggies);
+console.log(aka);
+
+veggies.push("onion");
+console.log(veggies);
+let t = veggies.length ;
+let deleted=[];
+
+for(let g = 0; g < t ; g++){
+ deleted[g] = veggies.pop();
+ console.log(deleted[g]);
+}
+console.log(deleted);
+
+aka.unshift("khira");
+console.log(aka);
+let val = aka.shift();
+console.log(aka);
+
+console.log(aka.slice(3,7));
+
+console.log(aka.splice(2,3,"awwww","chumma"));
+console.log(aka);
 */
+
+//Practice 1
+let company = ["Bloomberg","Microsoft","Uber","Google","IBM","Netflix"];
+ company.shift();
+ company.splice(1,1,"Ola");
+ company.push("Amazon");
+ console.log(company);
