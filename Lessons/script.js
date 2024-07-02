@@ -336,7 +336,7 @@ let filtermark = arrmark.filter((val) =>{
     return val>=90;
 })
 console.log(filtermark);
-*/
+
 
 //Practice 2
 
@@ -355,3 +355,58 @@ let reduceMulNum = arrnum.reduce((prev,next)=>{
 });
 console.log(reduceNum);
 console.log(reduceMulNum);
+*/
+
+//<-----document object model--->
+/*
+window.console.log("hello");
+
+
+let heading=  document.getElementById("heading");
+console.dir(heading);
+
+let head1 = document.getElementsByClassName("heading-class");
+console.dir(head1);
+
+let headin = document.getElementsByTagName("p");
+console.dir(headin);
+console.log(headin);
+*/
+// query Selector 
+/*
+let firstEl = document.querySelectorAll(".heading-class");
+console.dir(firstEl);
+let allEl = document.querySelector("#heading");//all cant be used on id
+console.dir(allEl);
+let el = document.querySelectorAll("p");
+console.dir(el);
+
+
+
+let dirsat = document.querySelector("#main");
+console.dir(dirsat.textContent);
+console.dir(dirsat.innerText);
+console.dir(dirsat.innerHTML);
+console.dir(dirsat.tagName);
+*/
+
+// Practice 1
+
+let pr = document.querySelector("h2");
+
+pr.innerText = pr.innerText + "from Apna college";
+console.dir(pr.innerText);
+
+//Practice 2
+
+let divs = document.querySelectorAll(".box");
+console.log(divs);
+// divs[0].innerText="aaa";
+// divs[1].innerText="bbb";
+// divs[2].innerText="ccc";
+let idxx =1;
+for(div of divs){
+    div.innerText = `new Unique value ${idxx}`;
+    idxx++;
+}
+console.log(divs);
