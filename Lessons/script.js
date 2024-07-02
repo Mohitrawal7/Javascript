@@ -218,7 +218,7 @@ console.log(aka.slice(3,7));
 
 console.log(aka.splice(2,3,"awwww","chumma"));
 console.log(aka);
-*/
+
 
 //Practice 1
 let company = ["Bloomberg","Microsoft","Uber","Google","IBM","Netflix"];
@@ -226,3 +226,132 @@ let company = ["Bloomberg","Microsoft","Uber","Google","IBM","Netflix"];
  company.splice(1,1,"Ola");
  company.push("Amazon");
  console.log(company);
+ */
+
+ //<=-----functions methods--->
+/*
+ function myFunction () {
+    console.log("Welcome to Apna college");
+    console.log("We are learning JS");
+ }
+ myFunction();
+ 
+ function my (msg){
+   // parameter -> input
+    console.log(msg);
+ }
+ my("I love U");
+
+ function add(x,y){
+    console.log(x+y);
+    s=x+y;
+    return s;
+    console.log("after return"); //nothing works after return statements
+ }
+ add(5,7);
+ let v =add(3,4);
+ console.log(v);
+
+const arrowSum = (a,b) =>{
+    console.log(a+b);
+}
+
+//Practice 1
+function vowel(string) {
+    let a=0;
+   for(const char of string){   
+    if(char ==='a' || char ==='e'|| char ==='i'|| char ==='o'|| char ==='u'||
+    char ==='A'|| char === 'E'|| char === 'i'|| char === 'O'|| char === 'U'
+     ) 
+    {
+    a++;
+    }
+
+    }
+    console.log(a);
+} 
+
+//Practice 2
+let ar= (string) =>{
+    let a=0;
+    for(const char of string){   
+     if(char ==='a' || char ==='e'|| char ==='i'|| char ==='o'|| char ==='u'||
+     char ==='A'|| char === 'E'|| char === 'i'|| char === 'O'|| char === 'U'
+      ) 
+     {
+     a++;
+     }
+ 
+     }
+     console.log(a);
+};
+*/
+
+//<----Methods--->
+/*
+let arr = [1,20,4,65,46,50,7];
+
+arr.forEach((val,i) => { //value at each index
+    console.log(val,i);
+})
+
+//Practice 1
+let ap = [2,5,6,76,45,96];
+ap.forEach((val) =>{
+    console.log(val*val);
+})
+*/
+
+/*
+let app= [3,4,5,7,9,16];
+
+let newarr = app.map((val) =>{
+    return val*val;
+});
+console.log(newarr);
+
+let filter = app.filter((val) =>{
+    return val%2==0;
+})
+console.log(filter);
+
+let output = app.reduce((result,current)=>{
+    return result+current;
+})
+console.log(output);
+
+let output1 = app.reduce((result,current)=>{
+   if(result>current)
+    return result;
+ else return current;
+// return result>current ? result : current ;
+})
+console.log(output1);
+
+//Practice 1
+
+let arrmark = [78,94,92,46,80,95,99];
+
+let filtermark = arrmark.filter((val) =>{
+    return val>=90;
+})
+console.log(filtermark);
+*/
+
+//Practice 2
+
+let input =prompt("enter number");
+let arrnum=[];
+for(let i=1;i<=input;i++){
+    arrnum.push(i)    ;
+};
+//55console.log(arrnum);
+
+let reduceNum = arrnum.reduce((prev,next)=>{
+    return prev+next;
+});
+let reduceMulNum = arrnum.reduce((prev,next)=>{
+    return prev*next;
+});
+console.log(reduceNum);
+console.log(reduceMulNum);
