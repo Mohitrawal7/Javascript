@@ -1,5 +1,5 @@
 body {
-    background: green;
+    background: black;
 }
 h1{
     color:deepskyblue;
@@ -13,8 +13,12 @@ button{
     border-width: 2px;
     padding: 7px;
 }
-h4{
+.h4{
     text-decoration: underline;
+}
+.heading4{
+    background-color: cadetblue;
+    width: 120px;
 }
 .box{
     width: 100px;

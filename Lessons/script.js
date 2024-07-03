@@ -391,7 +391,7 @@ console.dir(dirsat.tagName);
 */
 
 // Practice 1
-
+/*
 let pr = document.querySelector("h2");
 
 pr.innerText = pr.innerText + "from Apna college";
@@ -410,3 +410,97 @@ for(div of divs){
     idxx++;
 }
 console.log(divs);
+*/
+
+//<---DOM PART 2--->
+//<--attribute get and set
+/* let buto = document.querySelector("button");
+console.log(buto.getAttribute("class"));
+console.log(buto.setAttribute("id","mine"));
+
+// node.style   is used to check style and change styles
+console.log(buto.style);
+buto.style.backgroundColor = "white";
+
+// insert element and delete element
+let newBtn = document.createElement("button");
+newBtn.innerText = "click there!";
+console.log(newBtn);
+
+let h4 = document.querySelector(".h4");
+h4.prepend(newBtn);
+//h4.before(newBtn);
+//h4.append(newBtn);
+
+//newBtn.remove(); 
+
+*/
+
+// Practice 1
+/*
+let newerBtn = document.querySelector("button");
+newerBtn.innerText ="Click me";
+newerBtn.style.backgroundColor = "red";
+newerBtn.style.color = "white";
+
+let body1 = document.querySelector("body");
+body1.prepend(newerBtn);
+// document.querSelector("body").prepend("newerBtn");
+
+//Practice 2
+let head4 = document.querySelector("h4");
+head4.classList.add("heading4");
+
+*/
+
+// <---Events-->
+/*
+let btn1 = document.querySelector("button");
+
+btn1.onclick = () => {
+    console.log("Handler");
+    let a= 30;
+    a++;
+    console.log(a);
+}
+
+let box1 = document.querySelector(".box");
+box1.onmouseover = (e) => {
+    console.log("you are good.");
+    console.log(e.target);
+}
+
+let btn2 = document.querySelector("button");
+
+btn2.addEventListener("click", () => {
+    console.log("button2 was clicked -- Handler 1");
+})
+btn2.addEventListener("click", () => {
+    console.log("button2 was clicked -- Handler 2");
+})
+const handler =() => {
+    console.log("button2 was clicked -- Handler 3");
+}
+btn2.addEventListener("click",handler);
+btn2.addEventListener("click", () => {
+    console.log("button2 was clicked -- Handler 4");
+})
+
+btn2.removeEventListener("click",handler);
+*/
+
+// Practice 1
+
+let mode = document.querySelector("#mode");
+let currMode = "dark"; //light
+
+mode.addEventListener("click",() => {
+if(currMode === "dark"){
+    currMode = "light";
+    document.body.style.backgroundColor = "white";
+    document.querySelector("button").style.backgroundColor = "white";
+}else {
+    currMode = "dark";
+    document.body.style.backgroundColor = "black";
+}
+});
