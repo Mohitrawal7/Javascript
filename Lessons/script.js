@@ -490,7 +490,7 @@ btn2.removeEventListener("click",handler);
 */
 
 // Practice 1
-
+/*
 let mode = document.querySelector("#mode");
 let currMode = "dark"; //light
 
@@ -504,3 +504,159 @@ if(currMode === "dark"){
     document.body.style.backgroundColor = "black";
 }
 });
+*/
+
+//objects and classses
+
+//prototype and use 
+/*
+const employee = {
+    calcTax() {
+        console.log("tax rate is 13%.");
+    },
+}
+
+const karanArjun = {
+    salary:50000,
+};
+
+const karanArjun2 = {
+    salary:500000,
+};
+
+
+karanArjun.__proto__ = employee;
+karanArjun2.__proto__ = employee;
+*/
+
+//classes
+
+/*
+class restaurant {
+    chicken() {
+        console.log("chicken");
+    }
+
+    biryani() {
+        console.log("biryani");
+    }
+
+    setBrand(brand) {
+        this.brandName = brand;
+    }
+}
+
+let dawnRestaurant = new restaurant();
+dawnRestaurant.setBrand("Elite");
+*/
+
+//class apna way
+/*
+class ToyotaCar {
+    constructor(brand,mileage){
+        console.log("creating new object");
+        this.brand = brand;
+        this.mileage = mileage;
+    }
+    start() {
+        console.log("start");
+    }
+
+    stop() {
+        console.log("stop");
+    }
+}
+
+let fortuner = new ToyotaCar("fortuner",10);
+console.log(fortuner);
+let lexus = new ToyotaCar("lexus",12);
+console.log(lexus);
+*/
+
+//Inheritance
+/*
+class person {
+    constructor(){
+        this.species = "homo sapiens";
+    }
+
+    eat(){
+        console.log("eat");
+    }
+    sleep() {
+        console.log("sleep");
+    }
+    work(){
+        console.log("do nothing");
+    }
+}
+
+class Engineer extends person {
+    constructor(branch){
+        //super keyword
+        super(); //to invoke parent class constructor
+        this.branch = branch;
+    }
+    work(){
+        super.eat();
+        console.log("solve problems,build something");
+    }
+}
+let mohitObj = new Engineer();
+let engObj = new Engineer("chemical engineer");
+//super keyword
+*/
+
+//Practice 1
+/*
+let data = "secret data";
+class user {
+    constructor(name,email) {
+        this.name = name;
+        this.email = email ;
+    }
+
+    viewData () {
+        console.log ("data = " , data);
+    }
+}
+
+let student1 = new user("nim","nim78@email.com");
+let teacher1 = new user("mohit","mohit56@email.com")
+
+//Practice 2
+
+class Admin extends user{
+    constructor(name,email){
+        super(name,email);
+    }
+    editData () {
+       data = "some new value " ;
+    }
+}
+
+let admin1 = new Admin("denim","admin@email.com");
+*/
+
+// try catch error
+let a =5;
+let b=10;
+console.log("a = ", a);
+console.log("b = ",b);
+console.log("a + b = ",a+b);
+console.log("a + b = ",a+b);
+try{
+    console.log("a + b = ",a+c);
+} catch(err){
+    console.log(err);
+}
+console.log("a + b = ",a+b);
+console.log("b - a = ",b-a);
+console.log("b - a = ",b-a);
+try{
+    console.log("b - a = ",b-u);
+} catch(err){
+    console.log(err);
+}
+console.log("b - a = ",b-a);
+console.log("b - a = ",b-a);
