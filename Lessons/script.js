@@ -639,6 +639,7 @@ let admin1 = new Admin("denim","admin@email.com");
 */
 
 // try catch error
+/*
 let a =5;
 let b=10;
 console.log("a = ", a);
@@ -660,3 +661,90 @@ try{
 }
 console.log("b - a = ",b-a);
 console.log("b - a = ",b-a);
+*/
+
+// Callback , Promises & Async Await
+
+//Asynchronous
+/*
+console.log("one");
+console.log("two");
+setTimeout(() => {
+    console.log("timer");
+},4000);
+console.log("three");
+console.log("four");
+
+//callback
+function sum(a,b){
+    console.log(a+b);
+}
+function calculator (a,b,sumCallback){
+    sumCallback(a,b);
+}
+calculator(1,2,sum);
+*/
+//Callback hell
+/*
+function getData(dataId){
+   setTimeout(() =>{
+    console.log("data =" , dataId);
+   },2000);
+}
+getData(1);
+getData(2);
+getData(3);
+
+function getData(dataId,getNextData){
+    setTimeout(() =>{
+     console.log("data =" , dataId);
+     if(getNextData){
+        getNextData();
+     }
+    },2000);
+ }
+ getData(1,() =>{
+    getData(2 , () =>{
+         getData(3);
+    });
+ });
+*/
+
+ //promise
+ //promise module 
+ /*
+ let promise = new Promise((resolve,reject) =>{
+    console.log("I am promise.")
+    //reject("some error");
+})
+function getData(dataId,getNextData){
+    return new Promise((resolve,reject) =>{
+        setTimeout(() =>{
+            console.log("data =" , dataId);
+            resolve("success");
+            if(getNextData){
+               getNextData();
+            }
+           },5000);
+    })
+ }
+ let re = getData(112);
+ */
+//promise use for us
+/*
+const getPromise = () =>{
+    return new Promise((resolve,reject) =>{
+    console.log("I am promise.")
+    resolve("success");
+    //reject("error");
+});
+};
+
+let promise = getPromise();
+promise.then(() =>{
+    console.log("promise fulfilled");
+});
+promise.catch((err) => {
+    console.log("rejected",err);
+});
+*/
