@@ -748,3 +748,97 @@ promise.catch((err) => {
     console.log("rejected",err);
 });
 */
+
+//promise chains
+/*
+function asyncFunction1 () {
+    return new Promise((resolve,reject) =>{
+        setTimeout(() =>{
+            console.log("someData1");
+            resolve("success");
+        },4000);
+    });
+}
+function asyncFunction2 () {
+    return new Promise((resolve,reject) =>{
+        setTimeout(() =>{
+            console.log("someData2");
+            resolve("success");
+        },4000);
+    });
+}
+console.log("Fetching data1....")
+let p1 = asyncFunction1();
+p1.then((res) =>{
+    console.log(res);
+    console.log("Fetching data2...")
+    asyncFunction2().then((res) =>{
+    console.log(res);
+    })
+})
+
+//promise chain
+function getInfo(dataId){
+    return new Promise((resolve,reject) =>{
+        setTimeout(() =>{
+            console.log("data" ,dataId);
+            resolve("success");
+           },3000);
+    })
+ }
+ getInfo(1).then((res) =>{
+    return getInfo(2);
+ }).then((res)=>{
+    return getInfo(3)
+ }).then((res) =>{
+    console.log("success");
+ })
+ */
+
+ //async await
+ /*
+ function api(){
+    return new Promise ((resolve,reject) =>{
+      setTimeout(() =>{
+        console.log("weather data");
+        resolve("success");
+      },2000);
+    })
+ }
+async function getWeatherData (){
+    await api();
+} 
+*/
+function getInfor(dataId){
+    return new Promise((resolve,reject) =>{
+        setTimeout(() =>{
+            console.log("data" ,dataId);
+            resolve("success");
+           },3000);
+    })
+ }
+
+ async function getAllData() {
+    console.log("Getting data1....")
+    await getInfor(1);
+    console.log("Getting data2....")
+    await getInfor(2);
+    console.log("Getting data3....")
+    await getInfor(3);
+    console.log("Getting data4....")
+    await getInfor(4);
+    console.log("Getting data5....")
+    await getInfor(5);
+    console.log("Getting data6.....")
+    await getInfor(6);
+ }
+
+( async function getAllData() {
+    console.log("Getting data1....")
+    await getInfor(1);
+    console.log("Getting data2....")
+    await getInfor(2);
+    console.log("Getting data3....")
+    await getInfor(3);
+   
+ })();
