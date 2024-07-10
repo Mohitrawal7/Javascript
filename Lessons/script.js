@@ -808,7 +808,7 @@ function getInfo(dataId){
 async function getWeatherData (){
     await api();
 } 
-*/
+
 function getInfor(dataId){
     return new Promise((resolve,reject) =>{
         setTimeout(() =>{
@@ -833,6 +833,7 @@ function getInfor(dataId){
     await getInfor(6);
  }
 
+ //IIFE => Immediately Invoked Function Expression
 ( async function getAllData() {
     console.log("Getting data1....")
     await getInfor(1);
@@ -842,3 +843,24 @@ function getInfor(dataId){
     await getInfor(3);
    
  })();
+ */
+
+ //API AND PROJECT
+ /*
+const url ="https://cat-fact.herokuapp.com/facts";
+const  factPara = document.querySelector("#fact");
+const  getd = document.querySelector("#getd");
+
+
+ const getFacts = async () =>{
+    console.log("Getting data....")
+    let response = await fetch(url);
+    console.log(response); //JSON format
+    let data = await response.json();
+    console.log(data);
+    console.log(data[0].text);
+    factPara.innerText = data[4].text;
+}
+getd.addEventListener("click",getFacts);
+*/
+//Project code
